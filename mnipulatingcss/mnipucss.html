@@ -1,0 +1,22 @@
+<style>
+    div{
+        background-color: black;
+        width: 100px;
+        height: 100px;
+        transition: 2s;
+    }
+    .widthmax{
+        width: 900px;
+    }
+</style>
+<div id="one">
+
+</div>
+<button onclick="chan()">change color</button>
+<script>
+    var a=document.getElementById("one")
+    function chan(){
+        a.style.backgroundColor="red"
+        a.setAttribute("class","widthmaX")
+    }
+</script>
