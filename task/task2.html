@@ -1,0 +1,14 @@
+<button onclick="res()">add hello</button>
+<div id="one"></div>
+<script>
+    var rest=document.getElementById("one")
+    
+    function res(){
+        //method 1
+        <!-- rest.innerHTML +="hello" -->
+        //method 2
+        var h=document.createElement('h1')
+        h.textContent="hello"
+        rest.append(h)
+    }
+</script>
