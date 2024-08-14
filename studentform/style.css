@@ -1,17 +1,35 @@
 table{
-    border-width: 2px;
+    border-width: 3px;
     border-color: gray;
     border-style: solid;
     background-color:gray;
     text-align: center;
-    margin:10px;
+    margin:30px;
+    
 }
 td{
-    
-    background-color:white;
+    padding:5px;
+    background-color:Gainsboro;
     text-align: center;
+}
+h1{
+    background-color: black;
+    color: white;
+    padding:10px
 }
 
 button{
     background-color:aqua;
+    padding:5px
+}
+button:hover{
+    background-color:AliceBlue;
+    color:black;
+}
+body{
+    background-color:lightgray;
+}
+input{
+    padding:3px;
+    text-align:center;
 }
