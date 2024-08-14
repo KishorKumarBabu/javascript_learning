@@ -1,0 +1,17 @@
+table{
+    border-width: 2px;
+    border-color: gray;
+    border-style: solid;
+    background-color:gray;
+    text-align: center;
+    margin:10px;
+}
+td{
+    
+    background-color:white;
+    text-align: center;
+}
+
+button{
+    background-color:aqua;
+}

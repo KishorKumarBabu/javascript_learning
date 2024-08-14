@@ -4,30 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <center>
-        <h1>STUBENT FORM</h1>
-        <table>
+        <h1>STUDENT FROM</h1>
+        <table id="one">
             <tr>
                 <td>Name</td>
-                <td><input></td>
+                <td><input id="nam"></td>
             </tr>
             <tr>
                 <td>Age</td>
-                <td><input></td>
+                <td><input id="ag"></td>
             </tr>
             <tr>
                 <td>Gender</td>
-                <td>
+                <td id="gen">
                     <input type="radio" name="gender">Male
                     <input type="radio" name="gender">Female
                 </td>
             </tr>
             <tr>
                 <td>Course</td>
-                <td>
-                    <select>
+                <td >
+                    <select id="cour" style="width: 175px; text-align: center;">
                         <option >HTML</option>
                         <option >Css</option>
                         <option >Javascript</option>
@@ -37,7 +39,7 @@
             </tr>
             <tr>
                 <td>Email</td>
-                <td><input type="mail" placeholder="example@gmail.com"></td>
+                <td><input id="data" type="mail" placeholder="example@gmail.com"></td>
             </tr>
             <tr>
                 <td colspan="2" style="text-align: center;">
@@ -45,8 +47,18 @@
                 </td>
             </tr>
         </table>
+        <table id="two" >
+            <tr>
+                <td style="padding:7px"><b>NAME</b></td>
+                <td style="padding:7px"><b>AGE</b></td>
+                <td style="padding:7px"><b>COURSE</b></td>
+                <td style="padding:7px"><b>GENDER</b></td>
+                <td style="padding:7px;"><b>EMAIL</b></td>
+                <td style="padding:7px"><b>ACTION</b></td>
+            </tr>
+        </table>
+        <style>
+        </style>
     </center>
 </body>
-<style>
-</style>
 </html>
