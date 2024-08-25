@@ -112,3 +112,29 @@ body{
 .popup textarea:focus{
     outline:none;
 }
+.popup2{
+    background-color:#FD6569;
+    position:absolute;
+    width:30%;
+    border-radius:10px;
+    left:40%;
+    padding:40px;
+    top:30%;
+    text-align:center;
+    display:none;
+    z-index:2;
+}
+.popup2 h3{
+    padding:10px;
+}
+.popup2 p{
+    padding:10px;
+}
+.popup2 button{
+    margin:20px;
+    background-color:black;
+    color:white;
+    font-size:20px;
+    padding:10px;
+    border-radius:10px;
+}
