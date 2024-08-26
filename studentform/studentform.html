@@ -9,7 +9,7 @@
 <body>
     <center>
         <h1>STUDENT FROM</h1>
-        <table id="one">
+        <table id="one" >
             <tr>
                 <td>Name</td>
                 <td><input id="nam" ></td>
@@ -47,7 +47,8 @@
                 </td>
             </tr>
         </table>
-        <table id="two" >
+        <button class="export">Export</button>
+        <table id="two" style="margin-top: 10px;">
             <tr>
                 <td style="padding:7px"><b>NAME</b></td>
                 <td style="padding:7px"><b>AGE</b></td>
@@ -57,10 +58,20 @@
                 <td style="padding:7px"><b>ACTION</b></td>
             </tr>
         </table>
-        <style>
-        </style>
     </center>
+    
+    <div class="popup-overlay"></div>
+    <div class="popup2">
+        <h3>Confermation</h3>
+        <p>Are You Sure?</p>
+        <button class="butnyes" onclick="ok()">Yes</button>
+        <button class="butnno" onclick="no()">No</button>
+    </div>
 </body>
+<style>
+    
+</style>
+
 <script src="script.js">
  
 </script>

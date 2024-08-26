@@ -4,8 +4,10 @@ table{
     border-style: solid;
     background-color:gray;
     text-align: center;
-    margin:30px;
-    
+    margin-top:30px;
+    margin-left:30px;
+    margin-right:30px;
+
 }
 td{
     padding:5px;
@@ -32,4 +34,55 @@ body{
 input{
     padding:3px;
     text-align:center;
+}
+.popup2{
+    background-color:lightgray;
+    position:absolute;
+    width:30%;
+    border-radius:10px;
+    left:40%;
+    padding:40px;
+    top:30%;
+    display:none;
+    text-align:center;
+    z-index:2;
+}
+.popup2 h3{
+    padding:10px;
+}
+.popup2 p{
+    padding:10px;
+}
+.popup2 button{
+    margin:20px;
+    background-color:black;
+    color:white;
+    font-size:20px;
+    padding:10px;
+    border-radius:10px;
+}
+.popup-overlay{
+    background-color: black;
+    opacity: 0.8;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    z-index:1;
+}
+.popup-overlay{
+        background-color: black;
+        opacity: 0.8;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        bottom: 0;
+        z-index:1;
+        display:none;
+    }
+.export{
+    background-color:Silver;
+    margin-left:60%
 }
