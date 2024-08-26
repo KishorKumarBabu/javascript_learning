@@ -1,6 +1,7 @@
 var nam=document.getElementById("nam")
 var ag=document.getElementById("ag")
 var cour=document.getElementById("cour")
+var gen=document.querySelector('input[name="gender"]:checked')
 var data=document.getElementById("data")
 function stform()
 {
@@ -37,6 +38,17 @@ function stform()
     function dele(){
         newRow.remove()
     }
+    
+}
+function clearform(){
+    nam.value="";
+    ag.value="";
+    let genderRadios = document.querySelectorAll('input[name="gender"]');
+    genderRadios.forEach((radio) => {
+        radio.checked = false;
+    });
+    cour.value="";
+    data.value="";
     
 }
 
