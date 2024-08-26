@@ -18,10 +18,10 @@ addbook.addEventListener("click", function (event) {
   var title = titlein.value;
   var author = autherin.value;
   var discription = discin.value;
-if (title === "" || author === "" || discription === "") {
+  if (title === "" || author === "" || discription === "") {
     alert("Please fill in all the fields.");
-    return;}
-else{
+    return;
+  } else {
     event.preventDefault();
     var div = document.createElement("div");
     div.setAttribute("class", "book-containet");
@@ -30,11 +30,14 @@ else{
     <p>${discin.value}</p>
     <button onclick="del(event)">Delete</button>`;
     container.append(div);
+    titlein.value = null;
+    autherin.value = null;
+    discin.value = null;
     popoverlay.style.display = "none";
     popup.style.display = "none";
   }
 });
-var del1
+var del1;
 function del(event) {
   event.preventDefault();
   popup2.style.display = "block";
@@ -42,14 +45,13 @@ function del(event) {
   del1 = event.target.parentElement;
 }
 function ok(event) {
-    event.preventDefault()
-  if(del1){
-    del1.remove()
-    del1=null
+  event.preventDefault();
+  if (del1) {
+    del1.remove();
+    del1 = null;
   }
   popup2.style.display = "none";
   popoverlay.style.display = "none";
-  
 }
 cancel.addEventListener("click", function (event) {
   event.preventDefault();
@@ -59,4 +61,8 @@ cancel.addEventListener("click", function (event) {
   autherin.value = null;
   discin.value = null;
 });
-
+function no(event){
+  event.preventDefault();
+  popup2.style.display = "none";
+  popoverlay.style.display = "none";
+}
