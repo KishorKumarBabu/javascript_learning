@@ -6,6 +6,7 @@
     <title>STUDENT FORM</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <body>
     <center>
         <h1>STUDENT FROM</h1>
@@ -47,7 +48,7 @@
                 </td>
             </tr>
         </table>
-        <button class="export">Export</button>
+        <button class="export" onclick="exportToExcel()">Export</button>
         <table id="two" style="margin-top: 10px;">
             <tr>
                 <td style="padding:7px"><b>NAME</b></td>

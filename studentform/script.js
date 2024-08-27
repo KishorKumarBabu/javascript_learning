@@ -78,3 +78,19 @@ function clearform() {
   cour.value = "";
   data.value = "";
 }
+function exportToExcel() {
+  var table = document.getElementById('two');
+  var rows = [];
+  for (var i = 0, row; row = table.rows[i]; i++) {
+      var cells = [];
+      for (var j = 0, col; col = row.cells[j]; j++) {
+          cells.push(col.innerText);
+      }
+      rows.push(cells);
+  }
+  let wb = XLSX.utils.book_new();
+  let ws = XLSX.utils.aoa_to_sheet(rows);
+  XLSX.utils.book_append_sheet(wb, ws, "Data");
+  XLSX.writeFile(wb, "form_data.xlsx");
+}
+
