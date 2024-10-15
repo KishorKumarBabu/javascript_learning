@@ -1,15 +1,8 @@
-var x=1
+function a(){
+    function  c(){
+    console.log(b)
+    }
+    c()
+}
+var b=10
 a()
-b()
-console.log(x)
-
-function a() {
-  var x = 10;
-  console.log(x);
-}
-
-function b() {
-  var x = 20;
-  console.log(x);
-}
-
