@@ -1,8 +1,6 @@
-function a(){
-    function  c(){
-    console.log(b)
-    }
-    c()
-}
-var b=10
-a()
+
+const a=19 ;
+a=10
+let b
+b=10
+console.log(b)
