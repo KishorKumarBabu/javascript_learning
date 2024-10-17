@@ -1,6 +1,12 @@
-
-const a=19 ;
-a=10
-let b
-b=10
-console.log(b)
+function z(){
+  var b=100000
+function x(){
+  var a=10
+  function y(){
+    console.log(a,b)
+}
+y()
+}
+x()
+}
+z()
