@@ -1,12 +1,9 @@
-function z(){
-  var b=100000
 function x(){
-  var a=10
-  function y(){
-    console.log(a,b)
+  for(var i=1;i<=5;i++){
+  setTimeout(function(){
+    console.log(i)
+  },i*1000)
 }
-y()
+  console.log("kishor")
 }
 x()
-}
-z()
