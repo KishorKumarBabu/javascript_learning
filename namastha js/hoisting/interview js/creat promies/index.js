@@ -1,10 +1,14 @@
 cart = ["show", "pants", "kurtha"];
 const promise = creatorder(cart);
 console.log(promise);
+// this callback called when the resolve is performed
 promise.then(function (orderId) {
   console.log(orderId);
   /*  proccedtopayment(orderid); */
-});
+})
+.catch(function(err){
+    console.log(err.message)
+})
 function creatorder(cart) {
   const pr = new Promise(function (resolve, reject) {
     //creatored
@@ -24,5 +28,5 @@ function creatorder(cart) {
   return pr;
 }
 function validatecart(cart) {
-  return true;
+  return false;
 }
