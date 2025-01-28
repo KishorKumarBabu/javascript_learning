@@ -10,18 +10,19 @@ creatorder(cart)
   })
   .then(function ({message, amt}) {
     console.log(message, `amount`, amt);
+    return showordersummary({message,amt});
   })
-  .then(function (orderId) {
-    return showordersummary(orderId);
-  })
-  .then(function (summaryInfo) {
-    console.log(summaryInfo);
+  .then(function ({message,amt}) {
+    console.log(message,amt);
   })
   .then(function (summaryInfo) {
     return updateWallet(summaryInfo);
   })
   .then(function (updateinfo) {
     console.log(updateinfo);
+  })
+  .catch(function (error) {
+    console.error(error); // Failure case
   })
   .catch(function (err) {
     console.log(err.message);
@@ -52,16 +53,25 @@ function proccedtopayment(orderId) {
     resolve({ message: `payment secussfull for orderid:${orderId}`, amt: 500 });
   });
 }
-function showordersummary(orderId) {
+function showordersummary({message,amt}) {
   return new Promise(function (resolve, reject) {
-    resolve("showed order summary");
+    resolve({message:`${message} item price is `,amt});
   });
 }
 function updateWallet(orderId) {
   return new Promise(function (resolve, reject) {
+  if (sumaryvalitation())
+{
     resolve("The wallet has been updated");
+}
+if(!sumaryvalitation()) {
+  reject("failed to update the wallet")
+}
   });
 }
 function validatecart(cart) {
   return true;
+}
+function sumaryvalitation(){
+  return true
 }
