@@ -10,6 +10,26 @@ body{
     padding: 10px;
     border-radius:7px;
 }
+.navbar h1{
+    display: inline-block;
+}
+.log {
+    margin-left: 80%;
+}
+.sig{
+    margin-left: 10px;
+}
+.navbar button{
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: wheat;
+    border: none;
+
+}
+.navbar button:hover{
+    color: white;
+}
 .container{
     padding:5px;
 }
