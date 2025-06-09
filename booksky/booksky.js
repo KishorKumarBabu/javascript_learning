@@ -116,23 +116,10 @@ submit_sig.addEventListener("click", function (event) {
   }
   else{
     event.preventDefault(event);
-        // Create worksheet data
-        var data = [
-            ["Name", "Email", "Password"], // headers
-            [sig_name, sigemail, sigpass]        // row 1
-        ];
-
-        // Create a new workbook and worksheet
-        var wb = XLSX.utils.book_new();
-        var ws = XLSX.utils.aoa_to_sheet(data);
-
-        // Append worksheet to workbook
-        XLSX.utils.book_append_sheet(wb, ws, "Signup Data");
-
-        // Download as Excel file
-        XLSX.writeFile(wb, "signup_data.xlsx");
-
-
-
+    console.log(sig_name)
+    console.log(sigmail)
+    console.log(sigpass)
+    popoverlay.style.display = "none";
+    popup4.style.display = "none";
   }
 });
