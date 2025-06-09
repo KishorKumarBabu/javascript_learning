@@ -13,6 +13,23 @@
 <body>
     <div class="navbar">
         <h1>Booksky</h1>
+        <div class="popup3">
+        <h2>Log In</h2>
+            <form>
+                <input type="email" placeholder="Email ID" id="login-mail">
+                <input type="password" placeholder="Password" id="login-pass">
+                <button class="log-submit">submit</button>
+            </form>
+        </div>
+        <div class="popup4">
+        <h2>Create Account</h2>
+            <form>
+                <input type="text" placeholder="Name" id="sig-name">
+                <input type="email" placeholder="Email ID" id="sig-mail">
+                <input type="password" placeholder="Password" id="sig-pass">
+                <button class="sig-submit">submit</button>
+            </form>
+        </div>
         <button class="log">Login</button>
         <button class="sig">Signup</button>
     </div>
@@ -24,7 +41,7 @@
                 the financial philosophies of two father 
                 figures: a traditional, struggling "Poor Dad" and 
                 a wealthy, entrepreneurial "Rich Dad." 
-                It emphasizes financial literacy, acquiring assets 
+                It emphasizes financial literacy, acquiring assets  
                 over liabilities, and building wealth through 
                 entrepreneurship and investments, encouraging a 
                 mindset focused on financial independence.
@@ -51,5 +68,7 @@
     </div>
     <button class="add-button" id="add-popup" >+</button>
 </body>
+<!-- Add this in your HTML before your booksky.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <script src="booksky.js"></script>
 </html>

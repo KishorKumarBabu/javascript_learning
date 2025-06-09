@@ -14,7 +14,21 @@ var addbook = document.getElementById("add-book");
 var titlein = document.getElementById("book-title-input");
 var autherin = document.getElementById("book-author-input");
 var discin = document.getElementById("book-discription-input");
+// selecting log in
+var log_in = document.querySelector(".log");
+var logemail = document.getElementById("login-mail");
+var logpassword = document.getElementById("login-pass");
+var submit = document.querySelector(".log-submit");
+var popup3 = document.querySelector(".popup3");
+// selecting sign up
+var sign_up = document.querySelector(".sig");
+var popup4 = document.querySelector(".popup4");
+var submit_sig = document.querySelector(".sig-submit");
+var sigemail = document.getElementById("sig-mail");
+var sigpassword = document.getElementById("sig-pass");
+var signame = document.getElementById("sig-name");
 addbook.addEventListener("click", function (event) {
+      event.preventDefault();
   var title = titlein.value;
   var author = autherin.value;
   var discription = discin.value;
@@ -61,8 +75,64 @@ cancel.addEventListener("click", function (event) {
   autherin.value = null;
   discin.value = null;
 });
-function no(event){
+function no(event) {
   event.preventDefault();
   popup2.style.display = "none";
   popoverlay.style.display = "none";
 }
+log_in.addEventListener("click", function (event) {
+  event.preventDefault();
+  popoverlay.style.display = "block";
+  popup3.style.display = "block";
+});
+submit.addEventListener("click", function (event) {
+      event.preventDefault();
+  var mail = logemail.value;
+  var pass = logpassword.value;
+  if (mail === "" || pass === "") {
+    alert("Fill the Email and password");
+    return;
+  } else {
+    event.preventDefault();
+    console.log(mail);
+    console.log(pass);
+    popoverlay.style.display = "none";
+    popup3.style.display = "none";
+  }
+});
+sign_up.addEventListener("click", function (event) {
+  event.preventDefault();
+  popoverlay.style.display = "block";
+  popup4.style.display = "block";
+});
+submit_sig.addEventListener("click", function (event) {
+    event.preventDefault();
+  var sigmail = sigemail.value;
+  var sigpass = sigpassword.value;
+  var sig_name = signame.value;
+  if (sig_name === "" || sigmail === "" || sigpass === "") {
+    alert("Fill all the field");
+    return;
+  }
+  else{
+    event.preventDefault(event);
+        // Create worksheet data
+        var data = [
+            ["Name", "Email", "Password"], // headers
+            [sig_name, sigemail, sigpass]        // row 1
+        ];
+
+        // Create a new workbook and worksheet
+        var wb = XLSX.utils.book_new();
+        var ws = XLSX.utils.aoa_to_sheet(data);
+
+        // Append worksheet to workbook
+        XLSX.utils.book_append_sheet(wb, ws, "Signup Data");
+
+        // Download as Excel file
+        XLSX.writeFile(wb, "signup_data.xlsx");
+
+
+
+  }
+});
